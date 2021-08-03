@@ -7,26 +7,26 @@ ul=document.querySelector('#sideNav nav ul')
 navList=document.querySelector(':root');
 
 
-navArrowIn.addEventListener('click',()=>{
-  navArrowIn.style.display='none'
-  navArrowOut.style.display='block'
-  sideNav.style.width='7%'
-  navList.style.setProperty('--pseudo-display', 'none')
-  sM.style.cssText='flex-direction: column;';
-  sMa.forEach((e)=>{
-    e.style.cssText='margin: .5em 0 0 0;font-size:1.5em;'
-  })
-})
-navArrowOut.addEventListener('click',()=>{
-  navArrowOut.style.display='none'
-  navArrowIn.style.display='block'
-  sideNav.style.width='15%'
-  navList.style.setProperty('--pseudo-display', 'inline-block')
-  sM.style.cssText='flex-direction: row;';
-  sMa.forEach((e)=>{
-    e.style.cssText='margin-left:0.3em; font-size:1.9em;'
-  })
-})
+// navArrowIn.addEventListener('click',()=>{
+//   navArrowIn.style.display='none'
+//   navArrowOut.style.display='block'
+//   sideNav.style.width='7%'
+//   navList.style.setProperty('--pseudo-display', 'none')
+//   sM.style.cssText='flex-direction: column;';
+//   sMa.forEach((e)=>{
+//     e.style.cssText='margin: .5em 0 0 0;font-size:1.5em;'
+//   })
+// })
+// navArrowOut.addEventListener('click',()=>{
+//   navArrowOut.style.display='none'
+//   navArrowIn.style.display='block'
+//   sideNav.style.width='15%'
+//   navList.style.setProperty('--pseudo-display', 'inline-block')
+//   sM.style.cssText='flex-direction: row;';
+//   sMa.forEach((e)=>{
+//     e.style.cssText='margin-left:0.3em; font-size:1.9em;'
+//   })
+// })
 
 // side nav for small screen ------------------------
 let x = window.matchMedia("(max-width: 767px)")
@@ -67,31 +67,8 @@ if(x.matches){
     })
   })
 }
-// side nav for middem screen ------------------------
-let y = window.matchMedia("(min-width: 767px) and (max-width:920px)")
-if(y.matches){
-    navArrowIn.addEventListener('click',()=>{
-      navArrowIn.style.display='none'
-      navArrowOut.style.display='block'
-      sideNav.style.width='15%'
-      navList.style.setProperty('--pseudo-display', 'none')
-      sM.style.cssText='flex-direction: column;';
-      sMa.forEach((e)=>{
-        e.style.cssText='margin: .5em 0 0 0;font-size:1.5em;'
-      })
-    })
-    navArrowOut.addEventListener('click',()=>{
-      navArrowOut.style.display='none'
-      navArrowIn.style.display='block'
-      sideNav.style.width='30%'
-      navList.style.setProperty('--pseudo-display', 'inline-block')
-      sM.style.cssText='flex-direction: row;';
-      sMa.forEach((e)=>{
-        e.style.cssText='margin-left:0.3em; font-size:1.9em;'
-      })
-    })
-    
-}
+
+
 
 
 // start navside actions -----

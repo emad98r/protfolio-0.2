@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --light-blue-color: #32f1c4;
+  --light-blue-color: #00ffc3;
   --light-gray: #e6e6e6;
   --dark-gray: #7e7e80;
   --black: #1c1c1c;
@@ -59,20 +59,42 @@ video {
   padding: 1em 0.5em 2em 2em;
   transition: 0.3s;
   transform: translateX(-200px);
-  /* box-shadow: 0 0 5px gray; */
+}
+#home,
+#aboutMe,
+#skills,
+#education,
+#tCourese,
+#services,
+#lastProjects,
+#contactMe {
+  position: relative;
+  cursor: pointer;
 }
 .side-nav .logo {
   font-size: 7em;
   font-family: var(--logo-font);
   color: var(--light-blue-color);
   font-weight: normal;
+  position: relative;
+  cursor: pointer;
 }
-.side-nav .logo::after {
-  content: "ORTFOLIO";
-  font-size: 0.4em;
+.logo:hover:after {
+  content: "PORTFOLIO";
+  font-family: var(--small-taxt-font);
+  font-size: 0.2em;
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -392%;
+  top: 66%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
   color: var(--black);
-  display: var(--pseudo-display);
 }
+
 .side-nav nav ul li {
   list-style: none;
   padding: 0.5em 0;
@@ -83,61 +105,153 @@ video {
   font-size: 1.5em;
   cursor: pointer;
 }
-#home::after {
+
+#home:hover::after {
   content: "home";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#aboutMe::after {
+#aboutMe:hover::after {
   content: "about Me";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#skills::after {
+
+#home:hover::before,
+#aboutMe:hover::before,
+#skills:hover::before,
+#education:hover::before,
+#tCourese:hover::before,
+#services:hover::before,
+#lastProjects:hover::before,
+#contactMe:hover::before {
+  content: "\f0d9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: -45%;
+  font-size: 2em;
+  color: var(--light-blue-color);
+  transform: translate(-50%, -50%);
+}
+#skills:hover::after {
   content: "skills";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#education::after {
+#education:hover::after {
   content: "education";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#tCourese::after {
+#tCourese:hover::after {
   content: "T.Courese";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#services::after {
+#services:hover::after {
   content: "services";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#lastProjects::after {
+#lastProjects:hover::after {
   content: "last Projects";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
-#contactMe::after {
+#contactMe:hover::after {
   content: "contact Me";
   text-transform: capitalize;
   font-family: var(--small-taxt-font);
   font-size: 1.2em;
-  display: var(--pseudo-display);
+  width: 7em;
+  height: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: -350%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  color: var(--black);
 }
 .side-nav .s-m {
   display: flex;
@@ -163,7 +277,8 @@ video {
   border-radius: 50%;
   background-color: var(--black);
 }
-#navArrowIn {
+#navArrowIn,
+#navArrowOut {
   display: none;
 }
 @media screen and (max-width: 767px) {
@@ -175,19 +290,76 @@ video {
     top: auto;
     padding: 0.5em;
     align-items: center;
+    transform: none;
+  }
+  .side-nav .logo::after {
+    content: "ORTFOLIO";
+    font-size: 0.4em;
+    color: var(--white);
+    display: var(--pseudo-display);
   }
   .side-nav .logo::after {
     font-size: 0.7em;
   }
-  .logo::after,
-  #home::after,
-  #aboutMe::after,
-  #skills::after,
-  #education::after,
-  #tCourese::after,
-  #services::after,
-  #lastProjects::after,
+  .side-nav nav {
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  #home::after {
+    content: "home";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #aboutMe::after {
+    content: "about Me";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #skills::after {
+    content: "skills";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #education::after {
+    content: "education";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #tCourese::after {
+    content: "T.Courese";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #services::after {
+    content: "services";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
+  #lastProjects::after {
+    content: "last Projects";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    display: var(--pseudo-display);
+  }
   #contactMe::after {
+    content: "contact Me";
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
     display: var(--pseudo-display);
   }
   .side-nav .logo {
@@ -429,11 +601,6 @@ video {
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     padding: 1em 1em 9em 1em;
     width: 87%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
     gap: 2em;
   }
   .continer .abuot-me h2 {
@@ -608,11 +775,6 @@ video {
 @media screen and (min-width: 767px) and (max-width: 920px) {
   .s-continer {
     width: 87%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
     overflow: scroll;
   }
   .s-continer .continer {
@@ -883,11 +1045,6 @@ video {
 @media screen and (min-width: 767px) and (max-width: 920px) {
   .services-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
     overflow: scroll;
     padding: 0 1em;
   }
@@ -984,11 +1141,6 @@ video {
 @media screen and (min-width: 767px) and (max-width: 920px) {
   .porjects-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
     overflow: scroll;
     padding: 0 1em;
   }
@@ -1169,11 +1321,6 @@ a {
 @media screen and (min-width: 767px) and (max-width: 920px) {
   .contact-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
     overflow: scroll;
     padding: 0 1em;
   }
