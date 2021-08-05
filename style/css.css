@@ -10,7 +10,8 @@ html {
   --light-blue-color: #00eeff;
   --light-gray: #e6e6e6;
   --dark-gray: #7e7e80;
-  --black: #1c1c1c;
+  /* --black: #1c1c1c; */
+  --black: #393e46;
   --white: #ffffff;
   --bold-font: "Roboto Condensed", sans-serif;
   --button-font: "Nunito", sans-serif;
@@ -52,7 +53,8 @@ video {
   top: 0;
   left: 0;
   z-index: 2;
-  background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+  background-color: #393e46;
+  /* background-image: linear-gradient(to bottom, #434343 0%, black 100%); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -290,7 +292,7 @@ video {
     top: auto;
     padding: 0.5em 1em;
     align-items: center;
-    justify-content: center;
+    justify-content: stretch;
     transform: none;
   }
   .side-nav .logo::after {
@@ -308,6 +310,28 @@ video {
   #lastProjects:hover::before,
   #contactMe:hover::before {
     display: none;
+  }
+  #home:hover::after,
+  #aboutMe:hover::after,
+  #skills:hover::after,
+  #education:hover::after,
+  #tCourese:hover::after,
+  #services:hover::after,
+  #lastProjects:hover::after,
+  #contactMe:hover::after {
+    text-transform: capitalize;
+    font-family: var(--small-taxt-font);
+    font-size: 1.2em;
+    width: 5em;
+    height: auto;
+    text-align: left;
+    border-radius: 5px;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: var(--black);
   }
 
   .side-nav .logo::after {
@@ -481,11 +505,7 @@ video {
   padding: 1em 2em;
 }
 .about-me-section .continer {
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
 }
 .continer .abuot-me {
   width: 100%;
@@ -546,7 +566,9 @@ video {
   position: absolute;
   bottom: 0;
   right: 0;
+  color: var(--black);
 }
+
 .continer .con-img h1 {
   font-family: var(--bold-font);
   margin: 0 0 0.5em 0.5em;
@@ -647,11 +669,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -727,53 +745,8 @@ video {
 @media screen and (max-width: 767px) {
   .s-continer {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
-  }
-  .skills .skill p {
-    visibility: visible;
-    font-family: var(--small-taxt-font);
-    background-color: var(--black);
-    color: var(--light-blue-color);
-    margin: 0.5em 0 0 0;
-    border-radius: 0 10px 10px 0;
-  }
-  .skills .skill:first-child p {
-    width: 90%;
-  }
-  .skills .skill:nth-child(2) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(3) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(4) p {
-    width: 60%;
-  }
-  .skills .skill:nth-child(5) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(6) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(7) p {
-    width: 60%;
-  }
-  .skills .skill:nth-child(8) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(9) p {
-    width: 40%;
-  }
-  .skills .skill:nth-child(10) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(11) p {
-    width: 70%;
   }
 
   .s-continer .continer {
@@ -795,47 +768,6 @@ video {
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
   }
-  .skills .skill p {
-    visibility: visible;
-    font-family: var(--small-taxt-font);
-    background-color: var(--black);
-    color: var(--light-blue-color);
-    margin: 0.5em 0 0 0;
-    border-radius: 0 10px 10px 0;
-  }
-  .skills .skill:first-child p {
-    width: 90%;
-  }
-  .skills .skill:nth-child(2) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(3) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(4) p {
-    width: 60%;
-  }
-  .skills .skill:nth-child(5) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(6) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(7) p {
-    width: 60%;
-  }
-  .skills .skill:nth-child(8) p {
-    width: 80%;
-  }
-  .skills .skill:nth-child(9) p {
-    width: 40%;
-  }
-  .skills .skill:nth-child(10) p {
-    width: 50%;
-  }
-  .skills .skill:nth-child(11) p {
-    width: 70%;
-  }
 }
 
 /* start eduction section -----  */
@@ -843,11 +775,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -884,11 +812,7 @@ video {
 @media screen and (max-width: 767px) {
   .ed-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
   }
   .ed-section .continer ul {
@@ -904,11 +828,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -945,11 +865,7 @@ video {
 @media screen and (max-width: 767px) {
   .t-courses-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
   }
   .t-courses-section .continer ul {
@@ -965,11 +881,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -1041,11 +953,7 @@ video {
 @media screen and (max-width: 767px) {
   .services-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
     padding: 0 1em;
   }
@@ -1074,11 +982,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -1137,11 +1041,7 @@ video {
 @media screen and (max-width: 767px) {
   .porjects-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
     padding: 0 1em;
   }
@@ -1170,11 +1070,7 @@ video {
   width: 93%;
   height: 100vh;
   position: absolute;
-  background-image: linear-gradient(
-    to right,
-    var(--black) 60%,
-    var(--light-blue-color)
-  );
+  background-image: linear-gradient(to left, var(--black) 60%, #00eeff21);
   top: 0;
   right: 0;
   z-index: 1;
@@ -1304,11 +1200,7 @@ a {
 @media screen and (max-width: 767px) {
   .contact-section {
     width: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--black) 60%,
-      var(--light-blue-color)
-    );
+    background-image: linear-gradient(to top, var(--black) 60%, #00eeff21);
     overflow: scroll;
     padding: 0 1em;
   }
