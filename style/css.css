@@ -294,6 +294,8 @@ video {
     align-items: center;
     justify-content: stretch;
     transform: none;
+    border-top: 1px solid #ffffff3b;
+    box-shadow: 0 0px 8px #1a1a1a;
   }
   .side-nav .logo::after {
     content: "ORTFOLIO";
